@@ -11,4 +11,15 @@ $(function() {
         return false;
     });
 
+    function heightess() {
+        $(".skill-item").equalHeights();
+    }
+
+    $(window).resize(function() {
+        heightess();
+    });
+
+    heightess();
+
+
 });
