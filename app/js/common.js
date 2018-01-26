@@ -13,6 +13,7 @@ $(function() {
 
     function heightess() {
         $(".skill-item").equalHeights();
+        $(".problem-item").equalHeights();
     }
 
     $(window).resize(function() {
