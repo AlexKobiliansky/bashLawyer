@@ -1,0 +1,67 @@
+.s-disputes
+  margin-top: 55px
+  margin-bottom: 100px
+  font-size: 25px
+  line-height: 1.35
+  .section-title
+    margin-bottom: 35px
+
+.disput-desc
+  p
+    display: inline-block
+  img
+    width: 44%
+    float: right
+    margin-left: 30px
+
+.whom-item
+  margin-top: 55px
+  position: relative
+  margin-bottom: 80px
+  &-title
+    font-size: 30px
+    text-align: center
+    margin-bottom: 30px
+
+.whom-item-content
+  li
+    margin: 20px 0
+    &:before
+      content: '\2014'
+      margin-right: 10px
+
+.whom-wrapper
+  .col-sm-6:nth-child(odd)
+    .whom-item:after
+      content: ''
+      position: absolute
+      width: 1px
+      height: 100%
+      background-color: #ccc
+      right: 0
+      top: 80px
+  .col-sm-6:nth-child(even)
+    .whom-item:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: url("../img/bg-whom.png") no-repeat bottom center
+      background-size: contain
+      z-index: -1
+      opacity: .3
+
+.disput-result
+  padding: 28px 43px
+  border: 1px solid #ccc
+  margin-bottom: 60px
+
+.result-title
+  font-size: 30px
+  margin-bottom: 20px
+
+.disput-conclusion
+  font-size: 35px
+  margin-bottom: 50px

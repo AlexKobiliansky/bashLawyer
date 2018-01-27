@@ -17,6 +17,7 @@ $(function() {
         $(".feature-item").equalHeights();
         $(".scheme-item").equalHeights();
         $(".contact-item-content").equalHeights();
+        $(".whom-item").equalHeights();
     }
 
     $(window).resize(function() {
