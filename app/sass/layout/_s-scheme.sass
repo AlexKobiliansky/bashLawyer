@@ -1,0 +1,27 @@
+.s-scheme
+  padding: 45px 0
+  counter-reset: scheme-item
+
+
+
+.scheme-item
+  text-align: center
+  position: relative
+  padding-top: 40px
+  margin-top: 25px
+  &-pic
+    display: inline-block
+    max-width: 60px
+    margin-bottom: 20px
+  &-desc
+    line-height: 1.4
+  &:before
+    font-family: "robotoBold", sans-serif
+    color: $hover-color
+    font-size: 35px
+    position: absolute
+    top: 0
+    left: calc(50% - 10px)
+    counter-increment: scheme-item
+    content: counter(scheme-item)
+
