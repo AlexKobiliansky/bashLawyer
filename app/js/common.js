@@ -24,5 +24,24 @@ $(function() {
 
     heightess();
 
+    $(".owl-comments").owlCarousel({
+        loop: true,
+        margin: 30,
+        items: 2,
+        dotsEach: 1,
+        nav: true,
+        navText: ['', ''],
+        navSpeed: 600,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            768:{
+                items:2,
+            }
+        }
+    });
+
 
 });

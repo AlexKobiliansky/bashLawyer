@@ -1,0 +1,72 @@
+.s-comments
+  padding: 90px 0
+  position: relative
+  color: #fff
+  .container
+    position: relative
+    z-index: 5
+  .section-title
+    color: #fff
+
+.comment-item
+  text-align: center
+  &-pic
+    margin: 0 auto
+    max-width: 250px
+    margin-bottom: 15px
+  &-name
+    font-family: "robotoBold", sans-serif
+    font-size: 30px
+    line-height: 1.2
+    margin-bottom: 20px
+  &-content
+    font-family: "robotoMedium", sans-serif
+    font-size: 16px
+    line-height: 1.5
+
+.owl-comments
+  margin-top: 70px
+  position: relative
+  .owl-dots
+    text-align: center
+    margin-top: 35px
+    .owl-dot
+      width: 15px
+      height: 15px
+      background-color: #fff
+      border-radius: 50%
+      display: inline-block
+      margin: 0 11px
+      &.active
+        background-color: $hover-color
+  .owl-nav
+    position: absolute
+    top: 30%
+    width: 100%
+    .owl-prev
+      width: 55px
+      height: 55px
+      position: absolute
+      left: -50px
+      background: transparent url("../img/comments-prev.png") no-repeat 5px center
+      background-size: 40px 40px
+      opacity: .6
+      +mt(.4s)
+      border-radius: 50%
+      &:hover
+        opacity: 1
+        background-color: rgba(243,243,246,.2)
+
+    .owl-next
+      width: 55px
+      height: 55px
+      position: absolute
+      right: -50px
+      background: transparent url("../img/comments-next.png") no-repeat 10px center
+      background-size: 40px 40px
+      opacity: .6
+      border-radius: 50%
+      +mt(.4s)
+      &:hover
+        opacity: 1
+        background-color: rgba(243,243,246,.2)

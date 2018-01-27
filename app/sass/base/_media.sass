@@ -5,6 +5,14 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 
+
+  .owl-comments
+    .owl-nav
+      .owl-prev
+        left: -30px
+      .owl-next
+        right: -30px
+
   .form-decor-lamp
     width: 180px
     left: -90px
@@ -43,6 +51,13 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+
+  .owl-comments
+    .owl-nav
+      .owl-prev
+        left: -60px
+      .owl-next
+        right: -60px
 
   .features-wrapper
     .col-sm-6:nth-child(odd)
@@ -106,6 +121,13 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
+  .owl-comments
+    .owl-nav
+      .owl-prev
+        left: 0
+      .owl-next
+        right: 0
+
   .features-wrapper
     .col-sm-6:nth-child(odd)
       text-align: left
@@ -154,6 +176,28 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+
+  .s-comments
+    .section-title
+      text-align: center
+
+  .owl-comments
+    margin-top: 30px
+    .owl-nav
+      bottom: -20px
+      top: auto
+      .owl-prev
+        left: 20%
+      .owl-next
+        right: 20%
+
+  .comment-item
+    &-name
+      font-size: 24px
+    &-content
+      font-size: 15px
+      line-height: 1.8
+
 
   .s-features
     margin-top: 50px
