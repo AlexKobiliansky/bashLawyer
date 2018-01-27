@@ -5,6 +5,26 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 
+  .foot-mnu
+    li
+      a
+        font-size: 16px
+
+  .main-foot
+    .logo
+      width: 200px
+    .work-info
+      font-size: 16px
+      .phone
+        font-size: 24px
+    .foot-desc
+      font-size: 16px
+      span
+        font-size: 24px
+    .head-socials
+      .soc-icon
+        font-size: 28px
+
 
   .owl-comments
     .owl-nav
@@ -51,6 +71,24 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+
+  .foot-line
+    margin-top: 160px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .main-foot
+    .logo
+      width: 200px
+      top: 0
+    .work-info
+      display: inline-block
+      float: none
+    .head-socials
+      float: none
+      top: 0
+
 
   .owl-comments
     .owl-nav
@@ -176,6 +214,30 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+
+  .foot-line
+    margin-top: 240px
+    flex-direction: column
+    .logo
+      margin-bottom: 30px
+    .work-info
+      text-align: center
+      font-size: 14px
+      margin-bottom: 30px
+      .phone
+        font-size: 22px
+        margin-bottom: 7px
+    .head-socials
+      .soc-icon
+        margin-left: 30px
+      .soc-icon:nth-child(1)
+        margin-left: 0
+
+  .foot-mnu
+    li
+      a
+        font-size: 14px
+        margin: 8px 0
 
   .s-comments
     .section-title
