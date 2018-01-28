@@ -97,12 +97,7 @@ $(function() {
         });
     }
 
-
-
-
     //end animate customization
-
-
 
 
     //animations
@@ -110,8 +105,53 @@ $(function() {
     animateFeatures();
     animateScheme();
 
+    $.validate({
+        form : '.consult',
+    });
+
+    $.validate({
+        form : '.callback',
+    });
+
+    $(".user-phone").mask("+7 (999) 999-99-99",{autoclear: false});
+
+    $("a[href='#callback']").magnificPopup({
+        type: 'inline',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+    });
 
 
-
+    //E-mail Ajax Send
+    $("form").submit(function() { //Change
+        var th = $(this);
+        var btnText = th.find('.btn').text();
+        th.find('.btn').addClass("btn-disable").prop('disabled','disabled').text("Заявка отправлена");
+        $.ajax({
+            type: "POST",
+            url: "mail.php", //Change
+            data: th.serialize()
+        }).done(function() {
+            $(".success").addClass("active");
+            setTimeout(function() {
+                // Done Functions
+                $(".success").removeClass("active");
+                th.find(".btn").removeClass("btn-disable").removeAttr('disabled').text(btnText);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 3000);
+        });
+        return false;
+    });
 
 });

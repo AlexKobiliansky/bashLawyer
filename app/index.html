@@ -135,7 +135,7 @@
 				<p>Оформление зданий / строений </p>
 				<p>Жилищные программы </p>
 				<p>Арбитражные споры</p>
-				<a href="#0" class="btn fadeInRight">Заказать бесплатный звонок</a>
+				<a href="#callback" class="btn fadeInRight">Заказать бесплатный звонок</a>
 			</div>
 
 			<div class="welcome-title hidden-xs wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="1.5s">
@@ -327,42 +327,52 @@
 </section>
 
 <section class="s-consult s-bg">
-    <div class="container">
-        <form class="consult">
-            <div class="form-title wow fadeIn" data-wow-delay="0.5s" data-wow-duration="2s">
-                Получите консультацию юриста!! <br /> с большим опытом работы
-            </div>
-            <div class="form-content">
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-9 wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6">
-                                <label>
-                                    <input type="text" name="Имя" placeholder="Введите Ваше имя">
-                                </label>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <label>
-                                    <input type="text" name="Телефон" placeholder="Введите Ваш телефон">
-                                </label>
-                            </div>
-                            <div class="col-md-4 col-sm-12">
+	<div class="container">
+		<form class="consult">
+
+
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="БашЮрист">
+			<input type="hidden" name="admin_email" value="alex_kobilianskiy@bigmir.net">
+			<input type="hidden" name="form_subject" value="Заявка с сайта БашЮрист">
+			<!-- END Hidden Required Fields -->
+
+
+			<div class="form-title wow fadeIn" data-wow-delay="0.5s" data-wow-duration="2s">
+				Получите консультацию юриста <br /> с большим опытом работы
+			</div>
+			<div class="form-content">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-9 wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
+						<div class="row">
+							<div class="col-md-4 col-sm-6">
+								<label>
+									<input type="text" id="name" name="Имя" placeholder="Введите Ваше имя">
+								</label>
+							</div>
+							<div class="col-md-4 col-sm-6">
+								<label>
+									<input type="text" id="phone" name="Телефон" placeholder="Введите Ваш телефон" data-validation="custom" data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" data-validation-error-msg="* Укажите ваш телефон	" class="user-phone" data-validation-error-msg-container="#phone-error-dialog">
+									<span id="phone-error-dialog"></span>
+								</label>
+							</div>
+							<div class="col-md-4 col-sm-12">
 								<div class="btn-wrapper">
-                                    <button type="submit" class="btn">Получить консультацию</button>
+									<button type="submit" class="btn">Получить консультацию</button>
 								</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-decor-lamp hidden-xs wow fadeInLeft" data-wow-delay="1s" data-wow-duration="2s">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-decor-lamp hidden-xs wow fadeInLeft" data-wow-delay="1s" data-wow-duration="2s">
 				<img src="img/form-decor-lamp.png" alt="alt" class="img-responsive">
-            </div>
-            <div class="form-decor-book hidden-xs wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s">
+			</div>
+			<div class="form-decor-book hidden-xs wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s">
 				<img src="img/form-decor-book.png" alt="alt" class="img-responsive">
 			</div>
-        </form>
-    </div>
+		</form>
+	</div>
 </section>
 
 <section class="s-features">
@@ -575,12 +585,21 @@
 <section class="s-consult s-bg">
 	<div class="container">
 		<form class="consult">
-			<div class="form-title">
+
+
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="БашЮрист">
+			<input type="hidden" name="admin_email" value="alex_kobilianskiy@bigmir.net">
+			<input type="hidden" name="form_subject" value="Заявка с сайта БашЮрист">
+			<!-- END Hidden Required Fields -->
+
+
+			<div class="form-title wow fadeIn" data-wow-delay="0.5s" data-wow-duration="2s">
 				Получите консультацию юриста <br /> с большим опытом работы
 			</div>
 			<div class="form-content">
 				<div class="row">
-					<div class="col-md-offset-1 col-md-9">
+					<div class="col-md-offset-1 col-md-9 wow fadeIn" data-wow-delay="1s" data-wow-duration="2s">
 						<div class="row">
 							<div class="col-md-4 col-sm-6">
 								<label>
@@ -589,7 +608,8 @@
 							</div>
 							<div class="col-md-4 col-sm-6">
 								<label>
-									<input type="text" id="phone" name="Телефон" placeholder="Введите Ваш телефон">
+									<input type="text" id="phone" name="Телефон" placeholder="Введите Ваш телефон" data-validation="custom" data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" data-validation-error-msg="* Укажите ваш телефон	" class="user-phone" data-validation-error-msg-container="#phone-error-dialog">
+									<span id="phone-error-dialog"></span>
 								</label>
 							</div>
 							<div class="col-md-4 col-sm-12">
@@ -601,10 +621,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="form-decor-lamp hidden-xs">
+			<div class="form-decor-lamp hidden-xs wow fadeInLeft" data-wow-delay="1s" data-wow-duration="2s">
 				<img src="img/form-decor-lamp.png" alt="alt" class="img-responsive">
 			</div>
-			<div class="form-decor-book hidden-xs">
+			<div class="form-decor-book hidden-xs wow fadeInRight" data-wow-delay="1s" data-wow-duration="2s">
 				<img src="img/form-decor-book.png" alt="alt" class="img-responsive">
 			</div>
 		</form>
@@ -665,6 +685,30 @@
 		</div>
 	</div>
 </footer>
+
+<div class="hidden">
+	<form class="callback" id="callback">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="БашЮрист">
+		<input type="hidden" name="admin_email" value="alex_kobilianskiy@bigmir.net">
+		<input type="hidden" name="form_subject" value="Заявка с сайта БашЮрист">
+		<!-- END Hidden Required Fields -->
+
+
+		<h3>Заказать звонок</h3>
+		<label>
+			<input type="text" name="Имя" placeholder="Введите Ваше имя">
+		</label>
+		<label>
+			<input type="text" name="Телефон" placeholder="Введите Ваш телефон" data-validation="custom" data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" data-validation-error-msg="* Укажите ваш телефон	" class="user-phone" data-validation-error-msg-container="#phone-error-dialog1">
+		<span id="phone-error-dialog1"></span>
+	</label>
+	<div class="btn-wrapper">
+		<button type="submit" class="btn">Перезвоните мне</button>
+	</div>
+	</form>
+</div>
 
 <div id="toTop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
 

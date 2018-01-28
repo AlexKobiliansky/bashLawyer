@@ -36,7 +36,10 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/animateNumber/jquery.animateNumber.min.js',
 		'app/libs/animateCSS/animate-css.js',
 		'app/libs/wow/wow.min.js',
-		'app/js/common.min.js', // Всегда в конце
+        'app/libs/masked-input/jquery.maskedinput.min.js',
+        'app/libs/magnificPopup/jquery.magnific-popup.min.js',
+        'app/libs/form-validator/form-validator/jquery.form-validator.min.js',
+        'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js')) // минимизируем и соединяем в один файл
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)

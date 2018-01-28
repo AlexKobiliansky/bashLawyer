@@ -37,8 +37,8 @@ body textarea:required:valid
 html, body
   height: 100%
 
-input
-  outline: none
+input, button, a
+  outline: none!important
 
 body
   font-size: 16px
@@ -81,6 +81,12 @@ p
   &:hover
     background-color: darken($hover-color, 7%)
     box-shadow: 0 4px 4px darken($hover-color, 15%)
+
+.btn-disable
+  filter: brightness(0.5)
+  &:hover
+    box-shadow:  none
+    background-color: $hover-color
 
 .section-title
   font-size: 35px
@@ -182,3 +188,63 @@ button
 
 .wow
   visibility: hidden
+
+.mfp-close-btn-in .mfp-close
+  color: #fff
+
+
+
+
+.callback
+  max-width: 500px
+  border-radius: 5px
+  margin: 40px auto
+  position: relative
+  padding: 20px 30px
+  padding-bottom: 40px
+  background-color: lighten($accent-color, 10%)
+  color: #fff
+  box-shadow: 6px 6px 10px $accent-color
+  h3
+    font-size: 22px
+    margin: 25px 0
+  text-align: center
+  input
+    width: 100%
+    margin-bottom: 30px
+    padding: 12px
+    font-size: 18px
+    color: #333
+  .btn
+    padding: 16px 22px
+  #phone-error-dialog1
+    position: relative
+    top: -20px
+    display: block
+    text-align: left
+
+//mfp-zoom-in customization
+.my-mfp-zoom-in
+  .zoom-anim-dialog, #callback
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready #callback
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing #callback
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: 0
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+*
+  transition: filter .25s ease
+.mfp-wrap ~ *
+  filter: blur(5px)
+//end mfp-zoom-in customization
