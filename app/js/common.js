@@ -1,5 +1,12 @@
 $(function() {
 
+    $(".logo img").addClass("img-responsive");
+
+
+    //list styling for WP
+    $(".s-disputes ul").addClass("whom-item-content");
+    $(".practice-features ul").addClass("check");
+    $(".list-services ul").addClass("simple");
 
     $('ul.sf-menu').superfish({
         delay: 700,
@@ -97,6 +104,50 @@ $(function() {
         });
     }
 
+    function animateContacts(){
+        $(".contacts-wrapper .col-sm-6:nth-child(odd)").addClass("fadeInLeft");
+        $(".contacts-wrapper .col-sm-6:nth-child(even)").addClass("fadeInRight");
+    }
+
+    function animateContactsSoc(){
+        var delay=0;
+
+        $(".contact-soc .col-xs-4").each(function(){
+            $(this).attr("data-wow-delay", delay+'s');
+            delay = delay + 0.3;
+        });
+    }
+
+
+    function animateCheckList(){
+
+        $(".check p").each(function(){
+            $(this).addClass("wow fadeInUp").attr("data-wow-duration", "2s").attr("data-wow-delay", "0.5s");
+
+        });
+
+        $(".check li").each(function(){
+            $(this).addClass("wow fadeInUp").attr("data-wow-duration", "2s").attr("data-wow-delay", "0.5s");
+        });
+    }
+
+    function animateSimpleList(){
+
+        $(".simple p").each(function(){
+            $(this).addClass("wow fadeInLeft").attr("data-wow-delay", ".0.5s");
+
+        });
+
+        $(".simple li").each(function(){
+            $(this).addClass("wow fadeInLeft").attr("data-wow-duration", "2s").attr("data-wow-delay", ".0.5s");
+        });
+    }
+
+    function whomContacts(){
+        $(".whom-wrapper .col-sm-6:nth-child(odd)").addClass("fadeInLeft");
+        $(".whom-wrapper .col-sm-6:nth-child(even)").addClass("fadeInRight");
+    }
+
     //end animate customization
 
 
@@ -104,6 +155,12 @@ $(function() {
     animateProblems();
     animateFeatures();
     animateScheme();
+    animateContacts();
+    animateContactsSoc();
+    whomContacts();
+    animateCheckList();
+    animateSimpleList();
+
 
     $.validate({
         form : '.consult',
@@ -139,7 +196,7 @@ $(function() {
         th.find('.btn').addClass("btn-disable").prop('disabled','disabled').text("Заявка отправлена");
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "http://alexko.zzz.com.ua/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             $(".success").addClass("active");
@@ -154,4 +211,7 @@ $(function() {
         return false;
     });
 
+
+
+    new WOW().init();
 });

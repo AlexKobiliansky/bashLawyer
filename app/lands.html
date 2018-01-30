@@ -190,12 +190,12 @@
 
 <section class="s-lands s-practice">
     <div class="container">
-        <div class="section-title">
+        <div class="section-title wow fadeIn" data-wow-delay="0.5s">
             <p>Оформление земельных участков</p>
         </div>
         <div class="row">
             <div class="col-sm-offset-1 col-sm-10">
-                <div class="practice-desc">
+                <div class="practice-desc wow fadeIn" data-wow-delay="0.5s" data-wow-duration="1.5s">
                     <p>Услуги, которые мы оказываем по земельным вопросам, направлены на то, чтобы помочь всем землепользователям, землевладельцам и собственникам земельных участков разобраться в их правах на землю, грамотно распорядиться земельным участком или закрепить права на землю, которые ранее не были ими надлежащим образом оформлены.</p>
                     <div class="practice-desc-bg">
                         <img src="img/bg-lands-desc.png" alt="alt">
@@ -204,15 +204,15 @@
             </div>
         </div>
         <div class="practice-features">
-            <div class="subtitle">
+            <div class="subtitle wow fadeIn" data-wow-delay="0.5s">
                 <p>Что дает Вам право собственности:</p>
             </div>
             <div class="row">
                 <div class="col-sm-offset-1 col-sm-10">
                     <ul class="check">
                         <p>Физическому лицу:</p>
-                        <li>возможность продать дом и землю за хорошую цену;</li>
-                        <li>гарантии Ваших прав при сносе и расселении, возможность получить
+                        <li class="wow fadeIn">возможность продать дом и землю за хорошую цену;</li>
+                        <li class="wow fadeIn">гарантии Ваших прав при сносе и расселении, возможность получить
                             более высокую компенсацию;</li>
                         <li>возможность передать землю и дом по наследству, отсутствие
                             проблем у наследников с документами в будущем;</li>
@@ -232,7 +232,7 @@
             <div class="practice-list-bg">
                 <img src="img/bg-lands-simple.png" alt="alt">
             </div>
-            <div class="subtitle">
+            <div class="subtitle wow fadeIn" data-wow-delay="0.5s">
                 <p>Перечень услуг земельного юриста:</p>
             </div>
             <div class="row">
@@ -411,6 +411,32 @@
         </div>
     </div>
 </footer>
+
+<div class="hidden">
+    <form class="callback" id="callback">
+
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="БашЮрист">
+        <input type="hidden" name="admin_email" value="alex_kobilianskiy@bigmir.net">
+        <input type="hidden" name="form_subject" value="Заявка с сайта БашЮрист">
+        <!-- END Hidden Required Fields -->
+
+
+        <h3>Заказать звонок</h3>
+        <label>
+            <input type="text" name="Имя" placeholder="Введите Ваше имя">
+        </label>
+        <label>
+            <input type="text" name="Телефон" placeholder="Введите Ваш телефон" data-validation="custom" data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" data-validation-error-msg="* Укажите ваш телефон	" class="user-phone" data-validation-error-msg-container="#phone-error-dialog1">
+            <span id="phone-error-dialog1"></span>
+        </label>
+        <div class="btn-wrapper">
+            <button type="submit" class="btn">Перезвоните мне</button>
+        </div>
+    </form>
+</div>
+
+<div id="toTop"><i class="fa fa-angle-double-up" aria-hidden="true"></i></div>
 
 
 <link rel="stylesheet" href="css/main.min.css">
